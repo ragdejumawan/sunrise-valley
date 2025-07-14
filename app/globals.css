@@ -3,24 +3,66 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Resort brand colors */
+  --color-primary: #093f6b;
+  --color-secondary: #4fa3d1;
+  --color-accent: #ffd54f;
+  --color-sunset: #ff8a65;
+  --color-nature: #388e3c;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-dm-sans), Arial, Helvetica, sans-serif;
+  --font-serif: var(--font-playfair-display), Georgia, serif;
+  --font-mono: var(--font-geist-mono), monospace;
+  --font-script: 'Great Vibes', cursive;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+@layer utilities {
+  .text-primary {
+    color: var(--color-primary);
+  }
+
+  .text-accent {
+    color: var(--color-accent);
+  }
+
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+
+  .bg-accent {
+    background-color: var(--color-accent);
+  }
+
+  .btn {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;         /* py-2 px-6 */
+  border-radius: 9999px;         /* rounded-full */
+  font-weight: 600;              /* font-semibold */
+  transition: all 0.2s ease;     /* transition */
+}
+
+.btn-book {
+  background-color: var(--color-accent);  /* bg-accent */
+  color: var(--color-primary);            /* text-primary */
+}
+
+.btn-book:hover {
+  opacity: 0.9;
+}
+
+
+  .font-script {
+    font-family: var(--font-script);
+  }
 }
