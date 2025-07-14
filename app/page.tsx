@@ -1,7 +1,8 @@
-import Gallery from "@/components/Gallery";
+// import Gallery from "@/components/Gallery";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Camping from "@/components/Camping"
+import About from "@/components/About";
 
 
 export default function Home() {
@@ -10,7 +11,8 @@ export default function Home() {
     <Navbar />
     <main>
       <Hero />
-      <Gallery />
+      <About />
+      {/* <Gallery /> */}
       <Camping />
     </main>
     </>
